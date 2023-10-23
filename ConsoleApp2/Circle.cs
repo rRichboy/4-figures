@@ -15,11 +15,17 @@ namespace ConsoleApp2
             this.radius = radius;
         }
 
-        public double Perimeter()
+        private double Perimeter()
         { return (2 * Math.PI * radius); }
 
-        public double Ploshad()
+        private double Ploshad()
         { return (Math.PI * (radius * radius)); }
+
+        public void Out()
+        {
+            Console.WriteLine($"Площадь круга: {Ploshad()}");
+            Console.WriteLine($"Периметр круга: {Perimeter()}");
+        }
 
     }
 }

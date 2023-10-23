@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,10 +19,15 @@ namespace ConsoleApp2
         }
 
         public double Perimeter()
-        { return (2 * (width * height)); }
+        { return (2 * (width + height)); }
 
         public double Ploshad()
         { return (width * height); }
 
+        public void Out()
+        {
+            Console.WriteLine($"Площадь прямоугольника: {Ploshad()}");
+            Console.WriteLine($"Периметр прямоугольника: {Perimeter()}");
+        }
     }
 }

@@ -17,11 +17,17 @@ namespace ConsoleApp2
             this.storona = storona;
         }
 
-        public double Perimeter()
+        private double Perimeter()
         { return (4*storona); }
                 
-        public double Ploshad()
+        private double Ploshad()
         { return (storona*storona); }
+
+        public void Out()
+        {
+            Console.WriteLine($"Площадь квадрата: {Ploshad()}");
+            Console.WriteLine($"Периметр квадрата: {Perimeter()}");
+        }
 
     }
 }

@@ -6,7 +6,7 @@ class main
     {
         while (true)
         {
-            Console.WriteLine("1. Квадрат\n2. Круг\n3. Прямоугольник\n4. Треугольник\n5. Выйти");
+            Console.WriteLine("1. Квадрат\n2. Круг\n3. Прямоугольник\n4. Треугольник\n5. Пирамида\n6. Выйти");
             int choice = int.Parse(Console.ReadLine());
 
             switch (choice)
@@ -15,16 +15,14 @@ class main
                     Console.WriteLine("Введите сторону квадрата");
                     double storona = double.Parse(Console.ReadLine());
                     Square square = new Square(storona);
-                    Console.WriteLine($"Площадь квадрата: {square.Ploshad()}");
-                    Console.WriteLine($"Периметр квадрата: {square.Perimeter()}");
+                    square.Out();
                     break;
 
                 case 2:
                     Console.WriteLine("Введите радиус круга");
                     double radius = double.Parse(Console.ReadLine());
                     Circle circle = new Circle(radius);
-                    Console.WriteLine($"Площадь круга: {circle.Ploshad()}");
-                    Console.WriteLine($"Периметр круга: {circle.Perimeter()}");
+                    circle.Out();
                     break;
 
                 case 3:
@@ -33,8 +31,7 @@ class main
                     Console.WriteLine("Введите длину прямоугольника");
                     double height = double.Parse(Console.ReadLine());
                     Rectangle rectangle = new Rectangle(widht, height);
-                    Console.WriteLine($"Площадь квадрата: {rectangle.Ploshad()}");
-                    Console.WriteLine($"Периметр квадрата: {rectangle.Perimeter()}");
+                    rectangle.Out();
                     break;
 
                 case 4:
@@ -46,11 +43,19 @@ class main
                     double sideC = double.Parse(Console.ReadLine());
                     Triangle triangle = new Triangle(sideA, sideB, sideC);
                     Console.WriteLine($"Треугольник со сторонами {sideA}, {sideB}, {sideC} является {triangle.GetTriangleType()}.");
-                    Console.WriteLine($"Площадь треугольника: {triangle.Ploshad()}");
-                    Console.WriteLine($"Периметр треугольника: {triangle.Perimeter()}");
+                    triangle.Out();
                     break;
 
                 case 5:
+                    Console.WriteLine("Введите длину основания, высоту и количество сторон пирамиды:");
+                    double baseSide = double.Parse(Console.ReadLine());
+                    double height1 = double.Parse(Console.ReadLine());
+                    int numberOfSides = int.Parse(Console.ReadLine());
+                    Pyramid pyramid = new Pyramid(baseSide, height1, numberOfSides);
+                    pyramid.Out();
+                    break;
+
+                case 6:
                     Console.WriteLine("Программа завершена.");
                     return;
             }

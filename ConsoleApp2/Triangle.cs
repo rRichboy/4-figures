@@ -63,15 +63,21 @@ namespace ConsoleApp2
             return sideA != sideB && sideB != sideC && sideA != sideC;
         }
 
-        public double Perimeter()
+        private double Perimeter()
         {
             return (sideA + sideB + sideC);
         }
 
-        public double Ploshad()
+        private double Ploshad()
         {
             double s = Perimeter() / 2;
             return Math.Sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
+        }
+
+        public void Out()
+        {
+            Console.WriteLine($"Площадь треугольника: {Ploshad()}");
+            Console.WriteLine($"Периметр треугольника: {Perimeter()}");
         }
     }
 }
