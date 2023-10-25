@@ -8,17 +8,17 @@ namespace ConsoleApp2
 {
     class Circle
     {
-        private double radius;
+        protected double radius;
 
         public Circle(double radius)
         {
             this.radius = radius;
         }
 
-        private double Perimeter()
+        protected double Perimeter()
         { return (2 * Math.PI * radius); }
 
-        private double Ploshad()
+        protected double Ploshad()
         { return (Math.PI * (radius * radius)); }
 
         public void Out()

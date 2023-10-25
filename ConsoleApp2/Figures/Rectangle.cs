@@ -9,8 +9,8 @@ namespace ConsoleApp2
 {
     class Rectangle
     {
-        private double width;
-        private double height;
+        protected double width;
+        protected double height;
 
         public Rectangle(double width, double height)
         {
@@ -18,10 +18,10 @@ namespace ConsoleApp2
             this.height = height;
         }
 
-        public double Perimeter()
+        protected double Perimeter()
         { return (2 * (width + height)); }
 
-        public double Ploshad()
+        protected double Ploshad()
         { return (width * height); }
 
         public void Out()

@@ -8,9 +8,9 @@ namespace ConsoleApp2
 {
     class Triangle
     {
-        private double sideA;
-        private double sideB;
-        private double sideC;
+        protected double sideA;
+        protected double sideB;
+        protected double sideC;
 
         public Triangle(double sideA, double sideB, double sideC)
         {
@@ -43,32 +43,32 @@ namespace ConsoleApp2
             }
         }
 
-        private bool IsValid()
+        protected bool IsValid()
         {
             return (sideA + sideB > sideC) && (sideA + sideC > sideB) && (sideB + sideC > sideA);
         }
 
-        private bool IsIsosceles()
+        protected bool IsIsosceles()
         {
             return sideA == sideB || sideB == sideC || sideA == sideC;
         }
 
-        private bool IsEquilateral()
+        protected bool IsEquilateral()
         {
             return sideA == sideB && sideB == sideC;
         }
 
-        private bool IsScalene()
+        protected bool IsScalene()
         {
             return sideA != sideB && sideB != sideC && sideA != sideC;
         }
 
-        private double Perimeter()
+        protected double Perimeter()
         {
             return (sideA + sideB + sideC);
         }
 
-        private double Ploshad()
+        protected double Ploshad()
         {
             double s = Perimeter() / 2;
             return Math.Sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));

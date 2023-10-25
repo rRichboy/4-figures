@@ -9,9 +9,9 @@ namespace ConsoleApp2
 {
     internal class Pyramid
     {
-        private double baseSide;
-        private double height;
-        private int numberOfSides;
+        protected double baseSide;
+        protected double height;
+        protected int numberOfSides;
 
         public Pyramid(double baseSide, double height, int numberOfSides)
         {
@@ -20,20 +20,20 @@ namespace ConsoleApp2
             this.numberOfSides = numberOfSides;
         }
 
-        private double Ploshad()
+        protected double Ploshad()
         {
             double baseArea = baseSide * baseSide;
             double lateralArea = numberOfSides * baseSide * height / 2;
             return baseArea + lateralArea;
         }
 
-        private double Obyom()
+        protected double Obyom()
         {
             double baseArea = baseSide * baseSide;
             return (baseArea * height) / 3;
         }
 
-        private double Perimeter()
+        protected double Perimeter()
         {
             return baseSide * numberOfSides;
         }

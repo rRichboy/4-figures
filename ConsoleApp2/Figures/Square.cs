@@ -10,17 +10,17 @@ namespace ConsoleApp2
 {
     class Square
     {
-        private double storona;
+        protected double storona;
 
         public Square(double storona)
         {
             this.storona = storona;
         }
 
-        private double Perimeter()
+        protected double Perimeter()
         { return (4*storona); }
                 
-        private double Ploshad()
+        protected double Ploshad()
         { return (storona*storona); }
 
         public void Out()
