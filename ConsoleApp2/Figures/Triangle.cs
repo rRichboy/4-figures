@@ -74,7 +74,7 @@ namespace ConsoleApp2
             return Math.Sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
         }
 
-        public void Out()
+        public virtual void Out()
         {
             Console.WriteLine($"Площадь треугольника: {Ploshad()}");
             Console.WriteLine($"Периметр треугольника: {Perimeter()}");

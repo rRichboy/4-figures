@@ -13,7 +13,7 @@ class main
             switch (choice)
             {
                 case 1:
-                    Console.WriteLine("1. Квадрат\n2. Круг\n3. Прямоугольник\n4. Треугольник\n5. Пирамида\n6. Выйти");
+                    Console.WriteLine("1. Квадрат\n2. Круг\n3. Прямоугольник\n4. Треугольник\n5. Выйти");
                     int choice1 = int.Parse(Console.ReadLine());
 
                     switch (choice1)
@@ -54,15 +54,6 @@ class main
                             break;
 
                         case 5:
-                            Console.WriteLine("Введите длину основания, высоту и количество сторон пирамиды:");
-                            double baseSide = double.Parse(Console.ReadLine());
-                            double height1 = double.Parse(Console.ReadLine());
-                            int numberOfSides = int.Parse(Console.ReadLine());
-                            Pyramid pyramid = new Pyramid(baseSide, height1, numberOfSides);
-                            pyramid.Out();
-                            break;
-
-                        case 6:
                             Console.WriteLine("Программа завершена.");
                             return;
                     }

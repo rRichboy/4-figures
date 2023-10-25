@@ -24,11 +24,10 @@ namespace ConsoleApp2
 
         public double Volume()
         {
-            double baseArea = Ploshad();
-            return (1.0 / 3) * baseArea * pyramidHeight;
+            return (1.0 / 3) * Ploshad() * pyramidHeight;
         }
 
-        public void Out()
+        public override void Out()
         {
             Console.WriteLine($"Площадь полной поверхности: {Get_Ploshad()}");
             Console.WriteLine($"Объем пирамиды: {Volume()}");

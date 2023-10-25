@@ -24,7 +24,7 @@ namespace ConsoleApp2
         protected double Ploshad()
         { return (width * height); }
 
-        public void Out()
+        public virtual void Out()
         {
             Console.WriteLine($"Площадь прямоугольника: {Ploshad()}");
             Console.WriteLine($"Периметр прямоугольника: {Perimeter()}");

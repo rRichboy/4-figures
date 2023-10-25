@@ -21,7 +21,7 @@ namespace ConsoleApp2
         protected double Ploshad()
         { return (Math.PI * (radius * radius)); }
 
-        public void Out()
+        public virtual void Out()
         {
             Console.WriteLine($"Площадь круга: {Ploshad()}");
             Console.WriteLine($"Периметр круга: {Perimeter()}");

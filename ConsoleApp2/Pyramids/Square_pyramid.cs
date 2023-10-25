@@ -29,7 +29,7 @@ namespace ConsoleApp2
                 return (1.0 / 3) * Ploshad() * pyramidHeight;
             }
 
-            public new void Out()
+            public override void Out()
             {
                 Console.WriteLine($"Площадь полной поверхности: {Get_Ploshad()}");
                 Console.WriteLine($"Объем пирамиды: {Volume()}");

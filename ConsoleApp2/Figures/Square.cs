@@ -23,7 +23,7 @@ namespace ConsoleApp2
         protected double Ploshad()
         { return (storona*storona); }
 
-        public void Out()
+        public virtual void Out()
         {
             Console.WriteLine($"Площадь квадрата: {Ploshad()}");
             Console.WriteLine($"Периметр квадрата: {Perimeter()}");

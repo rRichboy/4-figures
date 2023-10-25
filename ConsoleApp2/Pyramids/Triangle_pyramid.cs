@@ -17,7 +17,7 @@ namespace ConsoleApp2
 
         private double Get_Ploshad()
         {
-            double s = (sideA + sideB + sideC) / 2;
+            double s = Perimeter() / 2;
             double triangleArea = Math.Sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
             return triangleArea;
         }
@@ -27,7 +27,7 @@ namespace ConsoleApp2
             return (1.0 / 3) * Ploshad() * pyramidHeight;
         }
 
-        public new void Out()
+        public override void Out()
         {
             Console.WriteLine($"Площадь полной поверхности: {Get_Ploshad()}");
             Console.WriteLine($"Объем пирамиды: {Volume()}");
